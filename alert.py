@@ -6,6 +6,7 @@ import os
 
 app = Flask(__name__)
 
+
 my_client = pymongo.MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/"))
 mydb = my_client[os.getenv("DB_NAME", "contacts_app")]
 alerts_collection = mydb["alerts"]
